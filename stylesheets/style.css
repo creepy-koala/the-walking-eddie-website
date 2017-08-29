@@ -1,0 +1,348 @@
+@font-face { font-family: Carton-Six; src: url('../fonts/Carton-Six.ttf'); }
+@font-face { font-family: Gobold-Lowplus; src: url('../fonts/Gobold-Lowplus.ttf'); }
+@font-face { font-family: Roboto-Light; src: url('../fonts/Roboto-Light.ttf'); }
+
+body {
+  background: linear-gradient(to right, #2C1834, #401724);
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-family: Roboto-Light, sans-serif;
+}
+
+hr.reviews {
+  width: 70%;
+}
+
+.container {
+  width: 70%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.form-control {
+  background: none;
+  color: #FFF;
+  text-align: center;
+  border-color: #C9E8B5;
+  border-width: 2px;
+  font-family: Roboto-Light, sans-serif;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 4px #A6FFBB;
+  border: 1px solid #A6FFBB;
+  border-width: 2px;
+}
+
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFF;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #FFF;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #FFF;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #FFF;
+}
+
+.btn {
+  background: -webkit-linear-gradient(left, #301A33, #67283C);
+  background: linear-gradient(to right, #301A33, #67283C);
+  border-color: #C9E8B5;
+  border-width: 2px;
+  box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.3);
+  color: #A6FFBB;
+  font-weight: bold;
+  font-family: Gobold-Lowplus, sans-serif;
+  text-shadow: -3px 3px 0px rgba(0,0,0, 0.4);
+}
+
+.btn:hover,
+.btn:active {
+  border-color: #ECFFE0;
+  color: #ECFFE0;
+}
+
+img#eddie-logo {
+  width: 300px;
+}
+
+img.download-badge {
+  height: 60px;
+  margin-left: -3px;
+}
+
+img.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#main-wrapper {
+  margin-top: 85px;
+}
+
+#youtube-player {
+  position: relative;
+  padding-bottom: 56.23%;
+  background: black;
+  /* Use 75% for 4:3 videos */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#youtube-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: transparent;
+}
+
+#youtube-player img {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: .4s all;
+  -moz-transition: .4s all;
+  transition: .4s all;
+}
+
+#youtube-player img:hover {
+  -webkit-filter: brightness(75%);
+}
+
+#youtube-player .play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("../images/play.png") no-repeat;
+  background-size: 72px;
+  cursor: pointer;
+}
+
+#description-wrapper {
+  text-align: left;
+  font-size: 15px;
+}
+
+#description-title {
+  font-family: Carton-Six, sans-serif;
+  font-size: 30px;
+}
+
+#description-title-eddie {
+  color: #A6FFBB;
+  font-size: 35px;
+}
+
+#download-btn-wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#social-wrapper {
+  width: 270px;
+  margin: 40px auto;
+}
+
+#form-subscription-wrapper {
+  margin-bottom: 15px;
+}
+
+#form-subscription-title {
+  color: #A6FFBB;
+  font-family: Carton-Six, sans-serif;
+  font-size: 17px;
+}
+
+#form-subscription-title b {
+  font-size: 21px;
+}
+
+#form-subscription {
+  width: 270px;
+  margin: auto;
+}
+
+a.btn-social {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+a.btn-social.btn-social-facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+a.btn-social.btn-social-facebook:hover,
+a.btn-social.btn-social-facebook:active {
+  background-image: url(../images/facebook-green.svg);
+}
+
+a.btn-social.btn-social-twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+a.btn-social.btn-social-twitter:hover,
+a.btn-social.btn-social-twitter:active {
+  background-image: url(../images/twitter-green.svg);
+}
+
+a.btn-social.btn-social-instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+a.btn-social.btn-social-instagram:hover,
+a.btn-social.btn-social-instagram:active {
+  background-image: url(../images/instagram-green.svg);
+}
+
+a.btn-social.btn-social-google-plus {
+  background-image: url(../images/google-plus.svg);
+}
+
+a.btn-social.btn-social-google-plus:hover,
+a.btn-social.btn-social-google-plus:active {
+  background-image: url(../images/google-plus-green.svg);
+}
+
+#reviews-title {
+  font-family: Carton-Six, sans-serif;
+  text-align: left;
+  font-size: 26px;
+}
+
+.review {
+  text-align: left;
+}
+
+.review-headline {
+  font-size: 16px;
+}
+
+.review-author {
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: 35px;
+}
+
+.review-reference {
+  text-align: right;
+}
+
+.review-reference a {
+  color: #A6FFBB;
+  text-decoration: underline;
+}
+
+.review-reference a:hover,
+.review-reference a:active {
+  color: #D9FFE2;
+}
+
+@media screen and (max-width: 1230px) {
+  #description-title {
+    font-size: 25px;
+  }
+
+  #description-title-eddie {
+    font-size: 30px;
+  }
+
+  #download-btn-wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  img.download-badge {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  hr.reviews {
+    width: 100%;
+  }
+
+  #description-wrapper {
+    margin-top: 20px;
+  }
+
+  #description-title {
+    font-size: 30px;
+  }
+
+  #description-title-eddie {
+    font-size: 35px;
+  }
+
+  #download-btn-wrapper {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  img.download-badge {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  body {
+    margin-top: 0px;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  #main-wrapper {
+    margin-top: 40px;
+  }
+
+  #hero-background {
+    background: 80% url(../images/web-bg-500.jpg);
+    background-size: auto 100%;
+    height: 400px;
+  }
+
+  #download-text-wrapper {
+    margin-top: 20px;
+  }
+
+  #social-wrapper {
+    margin-top: 20px;
+  }
+
+  #reviews-title {
+    font-size: 20px;
+  }
+
+  .review-headline,
+  .review-author {
+    font-size: 14px;
+  }
+
+  .review-reference {
+    text-align: left;
+  }
+}
