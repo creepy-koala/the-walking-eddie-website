@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function redirect() {
+        var redirectUrl = "/";
+
+        if (navigator.platform.match(/Android/i))
+        {
+          redirectUrl = "https://goo.gl/1839Gy";
+        }
+        else if (navigator.platform.match(/(iPhone|iPod|iPad)/i))
+        {
+          redirectUrl = "https://goo.gl/kWHzvh";
+        }
+
+        window.location.href = redirectUrl;
+      };
+    </script>
+  </head>
+  <body onload="redirect()"></body>
+</html>
