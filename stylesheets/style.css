@@ -11,7 +11,7 @@ body {
   font-family: Roboto-Light, sans-serif;
 }
 
-hr.reviews {
+hr {
   width: 70%;
 }
 
@@ -250,14 +250,26 @@ a.btn-social.btn-social-google-plus:active {
   text-align: right;
 }
 
-.review-reference a {
+a {
   color: #A6FFBB;
   text-decoration: underline;
 }
 
-.review-reference a:hover,
-.review-reference a:active {
+a:hover,
+a:active {
   color: #D9FFE2;
+}
+
+#footer-wrapper {
+  margin-top: 30px;
+}
+
+#privacy-policy-wrapper {
+  text-align: left;
+}
+
+#privacy-policy-wrapper h4 {
+  margin-top: 25px
 }
 
 @media screen and (max-width: 1230px) {
