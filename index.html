@@ -81,19 +81,19 @@
           <a class="btn-social btn-social-google-plus" href="https://plus.google.com/+Thewalkingeddie"></a>
         </div>
       </div>
-      <div id="form-subscription-wrapper" class="row">
-        <div class="col-xs-12">
-          <p id="form-subscription-title">Subscribe for <b>Zombastic</b> updates!</p>
-          <p>Sign up with your e-mail address to receive news and iOS early access.</p>
+      <hr>
+      <div id="media-wrapper" class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-12">
+          <div id="media-title">
+            <p>On the media!</p>
+          </div>
+          <div class="media">
+            <p class="media-reference">Estonian news article - <a target="_blank" href="https://tehnika.postimees.ee/4503948/ladina-ameerika-mangumeistrid-manasid-zombid-peipsi-aarde/">https://tehnika.postimees.ee/4503948/ladina-ameerika-mangumeistrid-manasid-zombid-peipsi-aarde/</a></p>
+            <p class="media-reference">Estonian GameDev Magazine Issue 3 - <a target="_blank" href="https://www.dropbox.com/sh/ssqd45cs7i5jg75/AAAYzOP6lUkQa3gJMOatwEUpa?preview=Estonian+GameDev+Magazine+Issue+3.pdf">https://www.dropbox.com/sh/ssqd45cs7i5jg75/AAAYzOP6lUkQa3gJMOatwEUpa?preview=Estonian+GameDev+Magazine+Issue+3.pdf</a></p>
+            <p class="media-reference">Interview - <a target="_blank" href="http://daikonmedia.com/gimme-5ive-interview-with-david-ochoa/">http://daikonmedia.com/gimme-5ive-interview-with-david-ochoa/</a></p>
+          </div>
         </div>
       </div>
-      <form id="form-subscription">
-        <div class="form-group form-group-lg">
-          <label class="sr-only" for="email-subscription">Email address</label>
-          <input type="email" class="form-control" id="email-subscription" placeholder="Email">
-        </div>
-        <button type="submit" class="btn btn-default btn-lg btn-block">SUBSCRIBE</button>
-      </form>
       <hr>
       <div id="reviews-wrapper" class="row">
         <div class="col-md-8 col-md-offset-2 col-sm-12">
@@ -122,34 +122,15 @@
           <h6>
             <span id="copyright">© <span id="copyright-year">2018</span> Creepy Koala</span> -
             <span id="home"><a href="/">Home</a></span> -
-            <span id="privacy-policy"><a href="privacy-policy">Privacy policy</span
+            <span id="privacy-policy"><a href="privacy-policy">Privacy policy</a></span>
           </h6>
         </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="javascripts/jquery.ajaxchimp.js"></script>
     <script>
       $(function(){
-        var form = $('#form-subscription');
-        form.ajaxChimp({
-          url: 'https://creepykoala.us13.list-manage.com/subscribe/post?u=752935f550fecb0fd9e2dee58&amp;id=e92b4185a6',
-          callback: callbackFunction
-        }).on('submit', function() {
-          form.find('.alert').each(function() {
-            $(this).remove();
-          });
-        });
-
-        function callbackFunction (resp) {
-          if (resp.result == 'success') {
-            form.html("<div class='alert alert-success' role='alert'><b>Success!</b> To complete the subscription, please click the link in the email we just sent you.</div>");
-          } else {
-            form.prepend("<div class='alert alert-danger' roler='alert'>Something went wrong, please make sure you entered your email correctly</div>")
-          }
-        }
-
         var year = new Date().getFullYear();
         $('#copyright-year').html(year);
       });
@@ -159,7 +140,7 @@
       (i[r].q=i[r].q||[]).push(arguments)
       },i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-75840215-1', 'auto');
       ga('send', 'pageview');
@@ -177,7 +158,8 @@
                 div.innerHTML = labnolThumb(v.dataset.id);
                 div.onclick = labnolIframe;
                 v.appendChild(div);
-          });
+          }
+      );
 
       function labnolThumb(id) {
           var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
